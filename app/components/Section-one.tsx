@@ -1,11 +1,24 @@
 "use client";
 import Image from "next/image";
 import TouchIcon from "../../public/apple-touch-icon.png";
+import mainText from "../../public/mainText.svg";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
+import AnimatedText from "./AnimatedText";
 
-export default function Hero() {
+const AnimatedLink = ({ text, href }: { text: string; href: string }) => {
+  return (
+    <Link
+      href={href}
+      className="hover:text-gray-300  overflow-hidden transition-colors duration-300"
+    >
+      <AnimatedText title={text} description={text} />
+    </Link>
+  );
+};
+
+export default function SectionOne() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const navContainer = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLTitleElement>(null);
@@ -42,7 +55,7 @@ export default function Hero() {
     }
   }, [isNavOpen]);
   return (
-    <div className="min-h-screen flex flex-col  ">
+    <div className="min-h-screen flex flex-col sticky top-0 left-0 z-0 ">
       <video
         className=" absolute left-0 top-0 h-full w-full object-cover -z-10"
         autoPlay
@@ -90,10 +103,7 @@ export default function Hero() {
         </div>
       </header>
       <div className="flex-1 flex items-center justify-center">
-        {/* cspell:disable-next-line */}
-        <h2 ref={titleRef} className="text-9xl text-white">
-          MCALPINE
-        </h2>
+        <Image src={mainText} alt="mainText" />
       </div>
 
       <div
@@ -112,51 +122,3 @@ export default function Hero() {
     </div>
   );
 }
-
-const AnimatedLink = ({ text, href }: { text: string; href: string }) => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-  const spanRef = useRef<HTMLSpanElement>(null);
-  const animatedSpan = useRef<HTMLSpanElement>(null);
-  useEffect(() => {
-    if (isHovered) {
-      gsap.to(spanRef.current, {
-        y: "-100%",
-        opacity: 0,
-      });
-      gsap.to(animatedSpan.current, {
-        y: 0,
-        opacity: 1,
-      });
-    } else {
-      gsap.to(spanRef.current, {
-        y: 0,
-        opacity: 1,
-      });
-      gsap.to(animatedSpan.current, {
-        y: "100%",
-        opacity: 0,
-      });
-    }
-  }, [isHovered]);
-  return (
-    <Link
-      onMouseEnter={() => {
-        setIsHovered(true);
-      }}
-      onMouseLeave={() => setIsHovered(false)}
-      className=" relative     rounded overflow-hidden "
-      href={href}
-    >
-      <span className="inline-block " ref={spanRef}>
-        {text.split("").map((l, i) => {
-          return <span key={i}>{l}</span>;
-        })}
-      </span>
-      <span className="inline-block absolute inset-0 " ref={animatedSpan}>
-        {text.split("").map((l, i) => {
-          return <span key={i}>{l}</span>;
-        })}
-      </span>
-    </Link>
-  );
-};
