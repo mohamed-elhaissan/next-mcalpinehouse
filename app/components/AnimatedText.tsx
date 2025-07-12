@@ -47,7 +47,7 @@ const AnimatedText = ({
           return <span key={i}>{l}</span>;
         })}
       </span>
-      <span className="inline-block absolute inset-0 " ref={animatedSpan}>
+      <span className="inline-block  absolute inset-0 " ref={animatedSpan}>
         {description}
       </span>
     </span>
