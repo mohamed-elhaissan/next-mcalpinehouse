@@ -19,13 +19,13 @@ export default function Hero() {
       gsap.to(navContainer.current, {
         x: 0,
         duration: 0.5,
-        ease: "power2.out",
+        ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       });
     } else {
       gsap.to(navContainer.current, {
         x: "-100%",
         duration: 0.5,
-        ease: "power2.out",
+        ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       });
     }
   }, [isNavOpen]);
@@ -87,15 +87,73 @@ export default function Hero() {
         className="bg-whit/40 p-20 backdrop-blur-2xl text-white fixed h-full  w-1/2"
       >
         <nav className="flex flex-col gap-3 text-6xl justify-center h-full ThinCanel">
-          <Link href={"/projects"}>Projects</Link>
-          <Link href={"/philosophy"}>Philosophy</Link>
-          <Link href={"/teams"}>Teams</Link>
-          <Link href={"/books"}>Books & Press</Link>
+          <AnimatedLink text="Projects" href="/projects" />
+          <Link className="hover:opacity-50" href={"/philosophy"}>
+            Philosophy
+          </Link>
+          <Link className="hover:opacity-50" href={"/teams"}>
+            Teams
+          </Link>
+          <Link className="hover:opacity-50" href={"/books"}>
+            Books & Press
+          </Link>
           {/* cspell:disable-next-line */}
-          <Link href={"/Forniture"}>Forniture Lines</Link>
-          <Link href={"/Contact"}>Contact</Link>
+          <Link className="hover:opacity-50" href={"/Forniture"}>
+            Forniture Lines
+          </Link>
+          <Link className="hover:opacity-50" href={"/Contact"}>
+            Contact
+          </Link>
         </nav>
       </div>
     </div>
   );
 }
+
+const AnimatedLink = ({ text, href }: { text: string; href: string }) => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const spanRef = useRef<HTMLSpanElement>(null);
+  const animatedSpan = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    if (isHovered) {
+      gsap.to(spanRef.current, {
+        y: "-100%",
+        opacity: 0,
+      });
+      gsap.to(animatedSpan.current, {
+        y: 0,
+        opacity: 1,
+      });
+    } else {
+      gsap.to(spanRef.current, {
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(animatedSpan.current, {
+        y: "100%",
+        opacity: 0,
+      });
+    }
+  }, [isHovered]);
+  return (
+    <Link
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => setIsHovered(false)}
+      className=" relative     rounded overflow-hidden "
+      href={href}
+    >
+      <span className="inline-block " ref={spanRef}>
+        {text.split("").map((l, i) => {
+          return <span key={i}>{l}</span>;
+        })}
+      </span>
+      <span className="inline-block absolute inset-0 " ref={animatedSpan}>
+        {text.split("").map((l, i) => {
+          return <span key={i}>{l}</span>;
+        })}
+      </span>
+    </Link>
+  );
+};
