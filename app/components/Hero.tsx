@@ -8,8 +8,20 @@ import gsap from "gsap";
 export default function Hero() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const navContainer = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLTitleElement>(null);
 
   useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      {
+        opacity: 0.5,
+        y: "50",
+      },
+      {
+        y: 0,
+        opacity: 1,
+      }
+    );
     gsap.set(navContainer.current, {
       x: "-100%",
     });
@@ -79,7 +91,9 @@ export default function Hero() {
       </header>
       <div className="flex-1 flex items-center justify-center">
         {/* cspell:disable-next-line */}
-        <h2 className="text-9xl text-white">MCALPINE</h2>
+        <h2 ref={titleRef} className="text-9xl text-white">
+          MCALPINE
+        </h2>
       </div>
 
       <div
@@ -88,22 +102,11 @@ export default function Hero() {
       >
         <nav className="flex flex-col gap-3 text-6xl justify-center h-full ThinCanel">
           <AnimatedLink text="Projects" href="/projects" />
-          <Link className="hover:opacity-50" href={"/philosophy"}>
-            Philosophy
-          </Link>
-          <Link className="hover:opacity-50" href={"/teams"}>
-            Teams
-          </Link>
-          <Link className="hover:opacity-50" href={"/books"}>
-            Books & Press
-          </Link>
-          {/* cspell:disable-next-line */}
-          <Link className="hover:opacity-50" href={"/Forniture"}>
-            Forniture Lines
-          </Link>
-          <Link className="hover:opacity-50" href={"/Contact"}>
-            Contact
-          </Link>
+          <AnimatedLink text="Philosophy" href="/philosophy" />
+          <AnimatedLink text="Teams" href="/teams" />
+          <AnimatedLink text="Books & Press" href="/books" />
+          <AnimatedLink text="Forniture Lines" href="/forniture" />
+          <AnimatedLink text="Contact" href="/contact" />
         </nav>
       </div>
     </div>
