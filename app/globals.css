@@ -31,8 +31,11 @@ body {
 .ThinCanel {
   font-family: "Canela-thin", sans-serif;
 }
-.projectContainer:hover 
-{
+.projectContainer:hover {
+  background-color: var(--selectionBackground);
+  color: white;
+}
+body::selection {
   background-color: var(--selectionBackground);
   color: white;
 }
