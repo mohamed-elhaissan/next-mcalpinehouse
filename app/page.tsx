@@ -35,25 +35,25 @@ export default function Home() {
     });
     return () => context.revert();
   }, []);
-  // useEffect(() => {
-  //   const lenis = new Lenis();
-  //   function raf(time: any) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-  //   requestAnimationFrame(raf);
-  //   return () => {
-  //     lenis.destroy();
-  //   };
-  // }, []);
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
   return (
     <div className="ThinCanel">
       <SectionOne />
       <div ref={imageContainer} className=" relative  bg-white w-full z-20">
         <div ref={image}>
-        <SectionTwo  />
-        <SectionTree />
-        <Footer />
+          <SectionTwo />
+          <SectionTree />
+          <Footer />
         </div>
       </div>
     </div>
