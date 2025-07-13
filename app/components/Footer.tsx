@@ -12,12 +12,12 @@ const AnimatedLink = ({ text, href }: { text: string; href: string }) => {
 export default function Footer() {
   const currentDate: Date = new Date();
   return (
-    <div className="mt-40 bg-[var(--selectionBackground)] ">
+    <div className="mt-40 rounded-4xl bg-[var(--selectionBackground)] ">
       <div className="flex  items-center justify-between p-20">
         <h2 className="text-white text-7xl ThinCanel">MCALPINE</h2>
         <div className="w-1/2">
           <nav className="flex flex-col gap-3 text-6xl justify-center h-full text-white ThinCanel">
-            <AnimatedLink text="Projects" href="/projects" />
+            <AnimatedLink text="Home" href="/" />
             <AnimatedLink text="Philosophy" href="/philosophy" />
             <AnimatedLink text="Teams" href="/team" />
             <AnimatedLink text="Books & Press" href="/book" />

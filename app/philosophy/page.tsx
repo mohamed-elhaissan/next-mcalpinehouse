@@ -37,7 +37,7 @@ export default function Philosophy() {
         scrollTrigger: {
           trigger: imageContainer.current,
           start: "top bottom",
-          end: "bottom top",
+        end: "bottom top",
 
           scrub: true,
         },
