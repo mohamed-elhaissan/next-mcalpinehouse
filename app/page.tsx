@@ -8,17 +8,17 @@ import SectionTwo from "./components/Section-Two";
 import Lenis from "lenis";
 
 export default function Home() {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time: any) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  //   return () => {
+  //     lenis.destroy();
+  //   };
+  // }, []);
   return (
     <div>
       <SectionOne />

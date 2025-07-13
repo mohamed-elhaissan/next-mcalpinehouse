@@ -2,7 +2,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --navBackground : #30363c;
+  --navBackground: #30363c;
+  --selectionBackground: #241c18;
 }
 
 @font-face {
@@ -29,5 +30,4 @@ body {
 }
 .ThinCanel {
   font-family: "Canela-thin", sans-serif;
-
 }
