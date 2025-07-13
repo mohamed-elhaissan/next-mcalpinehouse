@@ -32,7 +32,7 @@ export default function Philosophy() {
     const context = gsap.context(() => {
       const timeLine = gsap.timeline({
         scrollTrigger: {
-          target: imageContainer.current,
+          trigger: imageContainer.current,
           start: "top bottom",
           end: "bottom top",
 
