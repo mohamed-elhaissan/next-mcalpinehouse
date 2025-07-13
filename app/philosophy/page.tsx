@@ -7,7 +7,7 @@ import PlaceMainImage from "../../public/images/McAlpine_Palace_Main_2-1.webp";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default function Philosophy() {
-  const titleRef = useRef<HTMLHeadElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
   const titleText = "Philosophy".split("");
   const imageContainer = useRef<HTMLDivElement>(null);
   const image = useRef(null);
