@@ -7,13 +7,13 @@ interface Projects {
 
 export default function SectionTree() {
   return (
-    <div className="mt-20 flex flex-col items-center  justify-center ">
-        <h2 className="mb-20 text-9xl">Projects</h2>
+    <div className="mt-20 flex flex-col items-center   justify-center ">
+      <h2 className="mb-20 text-9xl">Projects</h2>
       {projects.map((word, index) => {
         return (
           <div
             key={index}
-            className="flex text-8xl ThinCanel  hover:cursor-pointer  transition-all hover:border-t hover:border-b   text-[#30363c] justify-center w-full p-4 text-center "
+            className="flex text-8xl ThinCanel projectContainer  hover:cursor-pointer  transition-all  hover:border-t hover:border-b   text-[#30363c] justify-center w-full p-4 text-center "
           >
             <AnimatedText title={word.title} description={word.description} />
           </div>

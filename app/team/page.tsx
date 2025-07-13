@@ -3,15 +3,15 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import PlaceMainImage from "../../public/images/McAlpine_Palace_Main_2-1.webp";
+import McAlpine_TEAM from "../../public/images/McAlpine_TEAM.webp";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import Placeholder1 from "../../public/images/Placeholder1.webp";
 import Footer from "../components/Footer";
 
-export default function Philosophy() {
+export default function Team() {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const titleText = "Philosophy".split("");
+  const titleText = "Team".split("");
   const imageContainer = useRef<HTMLDivElement>(null);
   const image = useRef(null);
   useEffect(() => {
@@ -69,7 +69,7 @@ export default function Philosophy() {
       <div ref={imageContainer} className="relative z-0">
         <Image
           ref={image}
-          src={PlaceMainImage}
+          src={McAlpine_TEAM}
           className="mx-auto "
           alt="Image"
         />
@@ -86,7 +86,7 @@ export default function Philosophy() {
         </div>
         <div className="flex  justify-start items-center gap-2">
           <div className="bg-zinc-200 p-20">
-            <Image ref={image} src={Placeholder1} alt={`Placeholder1`} />
+            <Image ref={image} src={Placeholder1} alt={`Placeholder1`}  priority />
           </div>
           <p className="w-1/3">
             Home is the place that mirrors our hearts. Your physical environment
@@ -108,7 +108,7 @@ export default function Philosophy() {
         </div>
       </div>
       <div className="relative z-30">
-      <Footer/>
+        <Footer />
       </div>
     </div>
   );

@@ -113,7 +113,7 @@ export default function SectionOne() {
         <nav className="flex flex-col gap-3 text-6xl justify-center h-full ThinCanel">
           <AnimatedLink text="Projects" href="/projects" />
           <AnimatedLink text="Philosophy" href="/philosophy" />
-          <AnimatedLink text="Teams" href="/teams" />
+          <AnimatedLink text="Teams" href="/team" />
           <AnimatedLink text="Books & Press" href="/books" />
           <AnimatedLink text="Forniture Lines" href="/forniture" />
           <AnimatedLink text="Contact" href="/contact" />

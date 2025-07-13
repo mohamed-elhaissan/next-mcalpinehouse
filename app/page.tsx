@@ -20,7 +20,7 @@ export default function Home() {
   //   };
   // }, []);
   return (
-    <div>
+    <div className="ThinCanel">
       <SectionOne />
       <div className=" relative  bg-white w-full z-20">
         <SectionTwo />
