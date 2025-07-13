@@ -9,9 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 import Placeholder1 from "../../public/images/Placeholder1.webp";
 import Footer from "../components/Footer";
 
-export default function Philosophy() {
+export default function Book() {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const titleText = "Philosophy".split("");
+  const titleText = "Books & Press".split("");
   const imageContainer = useRef<HTMLDivElement>(null);
   const image = useRef(null);
   useEffect(() => {
@@ -75,29 +75,16 @@ export default function Philosophy() {
         />
       </div>
       <div
-        
+        ref={imageContainer}
         className="h-screen mt-40 relative z-10 flex flex-col  w-[80%]  gap-20 mx-auto "
       >
-        <div className="flex items-center justify-center text-3xl ThinCanel">
+        <div className="flex items-start justify-center text-xl ThinCanel">
           <h2 className="w-1/2">Our story</h2>
           <p className="w-1/3">
             Home is inside us — the place where we find everything that is true.
           </p>
         </div>
-        <div className="flex  justify-start items-center gap-2">
-          <div className="bg-zinc-200 p-20">
-            <Image  src={Placeholder1} alt={`Placeholder1`} />
-          </div>
-          <p className="w-1/3">
-            Home is the place that mirrors our hearts. Your physical environment
-            keeps you in full awareness of where you are. If you can find your
-            way to live in the house within you, then you not only create an
-            enormous and broad offering to yourself, but also to those you love.
-            Always responsive and receptive, we find sanctuary in a place that
-            mirrors our soul. The best house is the house that looks like how we
-            feel inside.
-          </p>
-        </div>
+     
       </div>
       <div className="h-[100vh] flex items-center justify-center sticky top-0 left-0">
         <div className="text-9xl ThinCanel text-center">

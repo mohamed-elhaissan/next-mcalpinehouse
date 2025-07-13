@@ -114,7 +114,7 @@ export default function SectionOne() {
           <AnimatedLink text="Projects" href="/projects" />
           <AnimatedLink text="Philosophy" href="/philosophy" />
           <AnimatedLink text="Teams" href="/team" />
-          <AnimatedLink text="Books & Press" href="/books" />
+          <AnimatedLink text="Books & Press" href="/book" />
           <AnimatedLink text="Forniture Lines" href="/forniture" />
           <AnimatedLink text="Contact" href="/contact" />
         </nav>
