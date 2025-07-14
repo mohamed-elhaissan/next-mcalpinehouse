@@ -83,7 +83,7 @@ export default function Book() {
         </h2>
       </div>
       <div className=" my-40  relative z-10 flex flex-col  w-[80%]  gap-20 mx-auto ">
-        <div className="flex items-start text-xl justify-center ThinCanel">
+        <div className="flex items-start flex-col lg:flex-row text-3xl justify-center ThinCanel">
           <h2 className="w-1/2">Our Books</h2>
           <p className="w-1/3">
             & Press Our Books We are chameleons of sorts, changing to meet our
@@ -93,13 +93,13 @@ export default function Book() {
       </div>
 
       <div className="h-[100vh] flex items-center justify-center ">
-        <div className="text-9xl ThinCanel text-center flex flex-wrap items-center justify-center ">
+        <div className="text-9xl ThinCanel sm:bg-red-500 text-center flex flex-wrap items-center justify-center ">
           {allImages.map((item, index) => {
             return (
               <Image
                 src={item}
                 key={index}
-                className={` bg-zinc-200 p-6 scale-70 transition-all duration-150 ease-in-out   `}
+                className={` bg-zinc-200 p-6 scale-70 w-1/2 sm:w-1/4 transition-all duration-150 ease-in-out   `}
                 alt={`${item}`}
               />
             );

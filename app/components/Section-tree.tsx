@@ -13,7 +13,7 @@ export default function SectionTree() {
         return (
           <div
             key={index}
-            className="flex text-8xl ThinCanel projectContainer  hover:cursor-pointer  transition-all  hover:border-t hover:border-b   text-[#30363c] justify-center w-full p-4 text-center "
+            className="text-5xl flex lg:text-8xl ThinCanel projectContainer  hover:cursor-pointer  transition-all  hover:border-t hover:border-b   text-[#30363c] justify-center w-full p-4 text-center "
           >
             <AnimatedText title={word.title} description={word.description} />
           </div>

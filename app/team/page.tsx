@@ -88,21 +88,21 @@ export default function Team() {
         </div>
         <div className="flex flex-col items-center justify-around">
           <h2 className="text-7xl mb-20">Partners</h2>
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center  justify-center gap-2">
             <Image
               src={bobby}
-              className="mt-20 hover:scale-95 bg-zinc-300 hover:p-4 transition-all duration-200"
+              className="lg:mt-20  hover:scale-95 w-1/3 bg-zinc-300 hover:p-4 transition-all duration-200"
               alt={"bobby"}
             />
             <Image
               src={greg}
               alt={"greg"}
-              className=" hover:scale-95 transition-all bg-zinc-300 hover:p-4  duration-200"
+              className=" hover:scale-95 w-1/3 transition-all bg-zinc-300 hover:p-4  duration-200"
             />
             <Image
               src={RayBooth}
               alt={"ray"}
-              className=" hover:scale-95 transition-all bg-zinc-300 hover:p-4  mt-52 duration-200"
+              className=" hover:scale-95 w-1/3 transition-all bg-zinc-300 hover:p-4  lg:mt-52 duration-200"
             />
           </div>
         </div>

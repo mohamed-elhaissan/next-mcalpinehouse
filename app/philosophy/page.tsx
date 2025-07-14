@@ -37,7 +37,7 @@ export default function Philosophy() {
         scrollTrigger: {
           trigger: imageContainer.current,
           start: "top bottom",
-        end: "bottom top",
+          end: "bottom top",
 
           scrub: true,
         },
@@ -74,21 +74,18 @@ export default function Philosophy() {
           alt="Image"
         />
       </div>
-      <div
-        
-        className="h-screen mt-40 relative z-10 flex flex-col  w-[80%]  gap-20 mx-auto "
-      >
-        <div className="flex items-center justify-center text-3xl ThinCanel">
-          <h2 className="w-1/2">Our story</h2>
-          <p className="w-1/3">
+      <div className="h-screen mt-40 relative z-10 flex flex-col  w-[80%]  gap-20 mx-auto ">
+        <div className="flex items-center flex-col lg:flex-row justify-center text-3xl ThinCanel">
+          <h2 className="w-1/2">Our story :</h2>
+          <p className="w-full lg:w-1/3">
             Home is inside us — the place where we find everything that is true.
           </p>
         </div>
-        <div className="flex  justify-start items-center gap-2">
+        <div className="flex flex-col lg:flex-row  justify-start items-center gap-2">
           <div className="bg-zinc-200 p-20">
-            <Image  src={Placeholder1} alt={`Placeholder1`} />
+            <Image src={Placeholder1} alt={`Placeholder1`} />
           </div>
-          <p className="w-1/3">
+          <p className="w-full lg:w-1/3">
             Home is the place that mirrors our hearts. Your physical environment
             keeps you in full awareness of where you are. If you can find your
             way to live in the house within you, then you not only create an
@@ -100,7 +97,7 @@ export default function Philosophy() {
         </div>
       </div>
       <div className="h-[100vh] flex items-center justify-center sticky top-0 left-0">
-        <div className="text-9xl ThinCanel text-center">
+        <div className=" text-5xl lg:text-9xl ThinCanel text-center">
           <div className="relative">
             <h2 className="relative z-20">"I Know a Place."</h2>
           </div>
@@ -108,7 +105,7 @@ export default function Philosophy() {
         </div>
       </div>
       <div className="relative z-30">
-      <Footer/>
+        <Footer />
       </div>
     </div>
   );
