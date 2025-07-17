@@ -111,7 +111,7 @@ export default function SectionOne() {
         className="bg-whit/40 p-20 backdrop-blur-2xl text-white fixed h-full  w-1/2"
       >
         <nav className="flex flex-col gap-3 text-6xl justify-center h-full ThinCanel">
-          <AnimatedLink text="Projects" href="/projects" />
+        
           <AnimatedLink text="Philosophy" href="/philosophy" />
           <AnimatedLink text="Teams" href="/team" />
           <AnimatedLink text="Books & Press" href="/books" />

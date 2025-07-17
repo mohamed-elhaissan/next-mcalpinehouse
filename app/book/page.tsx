@@ -93,7 +93,7 @@ export default function Book() {
       </div>
 
       <div className="h-[100vh] flex items-center justify-center ">
-        <div className="text-9xl ThinCanel sm:bg-red-500 text-center flex flex-wrap items-center justify-center ">
+        <div className="text-9xl ThinCanel  text-center flex flex-wrap items-center justify-center ">
           {allImages.map((item, index) => {
             return (
               <Image

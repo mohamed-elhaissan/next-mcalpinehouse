@@ -1,17 +1,31 @@
-## im still working on it 
+## MCAPLINE
+
 <img src="https://github.com/mohamed-elhaissan/next-mcalpinehouse/blob/main/public/screenShot.png" />
-## Getting Started
 
-First, run the development server:
+## ✨ Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- `Nextjs`
+- `TypeScript`
+- `Framer Motion`
+- `Tailwind CSS`
+- `Vite`
+- `clsx` + `tailwind-merge` for className composition
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
+
+- **Clean, Responsive Design:**
+
+- **Framer Motion Magic:**
+
+- **Accessible & Semantic:**
+
+- **Project Highlights:**
+
+- **Performance Focused:**
+
+## 🚦 Running the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mohamed-elhaissan/next-mcalpinehouse.git
+   ```
